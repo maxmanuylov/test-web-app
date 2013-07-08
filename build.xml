@@ -1,0 +1,23 @@
+<project name="Build" basedir="." default="build-war">
+
+    <property name="jps.home.path" value="${basedir}/lib/jps"/>
+
+    <target name="build-war">
+        <java classname="org.jetbrains.jps.build.Standalone">
+            <classpath>
+                <fileset dir="${jps.home.path}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+
+            <sysproperty key="idea.home.path" value="${jps.home.path}"/>
+
+            <arg value="--artifacts"/>
+            <arg value="test-web-app:war"/>
+            <arg value="--cache-dir"/>
+            <arg value="${basedir}/.jps-cache"/>
+            <arg value="${basedir}"/>
+        </java>
+    </target>
+
+</project>
