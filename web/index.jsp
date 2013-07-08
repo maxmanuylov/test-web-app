@@ -12,6 +12,5 @@
   </head>
   <body>
     <p>Hello from web application!</p>
-    <p>QA</p>
   </body>
 </html>
