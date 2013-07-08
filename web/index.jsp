@@ -12,6 +12,6 @@
   </head>
   <body>
     <p>Hello from web application!</p>
-    <p>new message</p>
+    <p>QA</p>
   </body>
 </html>
